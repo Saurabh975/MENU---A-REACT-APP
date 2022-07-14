@@ -4,6 +4,7 @@ import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap';
 import Moment from 'react-moment';
 
 const RenderDish = ({ dish }) => {
+  dish = dish.dish
   if (dish != null) {
     return (<div className="col-12 col-md-5 m-1">
       <Card key={dish.id}>
@@ -18,7 +19,7 @@ const RenderDish = ({ dish }) => {
   else return (<div></div>)
 }
 
-const renderComments = (dish) => {
+function renderComments({dish}) {
   if (dish != null)
     return (
       <div className="col-12 col-md-5 m-1">
@@ -48,7 +49,7 @@ export default function DishdetailComponent(dish) {
   return (
     <div className="row">
       <RenderDish dish={dish} />
-      {/* {renderComments(dish)} */}
+      {renderComments(dish)}
     </div>
   )
 }
