@@ -19,7 +19,7 @@ const RenderDish = ({ dish }) => {
   else return (<div></div>)
 }
 
-function renderComments({dish}) {
+function RenderComments({dish}) {
   if (dish != null)
     return (
       <div className="col-12 col-md-5 m-1">
@@ -49,7 +49,7 @@ export default function DishdetailComponent(dish) {
   return (
     <div className="row">
       <RenderDish dish={dish} />
-      {renderComments(dish)}
+      {RenderComments(dish)}
     </div>
   )
 }
