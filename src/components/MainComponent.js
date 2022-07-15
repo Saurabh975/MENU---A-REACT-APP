@@ -35,7 +35,6 @@ export default class MainComponent extends Component {
                 <Menu dishes={this.state.dishes}
                     onClick={(dishId) => this.onDishSelect(dishId)} />
                 {this.dishDetail(this.state.selectedDish)}
-                {/* <DishDetail dish={this.state.dishes.filter((dish) => this.state.selectedDish === dish.id)[0]} /> */}
             </div>
         );
     }
